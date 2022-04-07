@@ -1,0 +1,133 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <Grid Height="434" VerticalAlignment="Center">
+
+        <Grid.Resources>
+            <Style x:Key="SliderRepeatButton" TargetType="RepeatButton">
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="IsTabStop" Value="false" />
+                <Setter Property="Focusable" Value="false" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="RepeatButton">
+                            <Border Background="Transparent"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="SliderRepeatButton1" TargetType="RepeatButton">
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="RepeatButton">
+                            <Border SnapsToDevicePixels="True" Background="YellowGreen"  BorderThickness="1" BorderBrush="YellowGreen" Height="3"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="SliderThumb" TargetType="Thumb">
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Thumb">
+                            <StackPanel Orientation="Vertical">
+                                <Path Data="M 0 0 L 8 0 L 4 6 Z"  Stroke="YellowGreen" Margin="-2,0,0,0" StrokeThickness="2" Fill="YellowGreen"></Path>
+                                <Line X1="0" Y1="0" X2="0" Y2="7" Stroke="Gray" StrokeThickness="1" Margin="2,0,0,0" StrokeDashArray="1.5,1.5"></Line>
+                                <TextBlock Foreground="Black" Margin="-2,30,0,0"  Text=""/>
+                            </StackPanel>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <ControlTemplate x:Key="Slider"  TargetType="Slider">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <TickBar  x:Name="TopTick"  Fill="LightGray" VerticalAlignment="Bottom"   SnapsToDevicePixels="True" Grid.Row="0" Placement="Top" Height="5" Visibility="Visible"/>
+                    <Border BorderBrush="LightGray"  BorderThickness="0,0,0,1" ></Border>
+                    <Border x:Name="TrackBackground" VerticalAlignment="Center" Margin="0,-10,0,0" BorderBrush="Red" Background="Red" Height="3"   Grid.Row="1"  BorderThickness="1"/>
+                    <Track Grid.Row="1" x:Name="PART_Track" Margin="0,-10,0,0" >
+                        <Track.DecreaseRepeatButton>
+                            <RepeatButton Style="{StaticResource SliderRepeatButton1}"  Command="Slider.DecreaseLarge" />
+                        </Track.DecreaseRepeatButton>
+                        <Track.Thumb>
+                            <Thumb Style="{StaticResource SliderThumb}" Margin="0,-20,0,0" />
+                        </Track.Thumb>
+                        <Track.IncreaseRepeatButton>
+                            <RepeatButton Style="{StaticResource SliderRepeatButton}" Command="Slider.IncreaseLarge"/>
+                        </Track.IncreaseRepeatButton>
+                    </Track>
+                    <TextBlock Text="" Grid.Row="1" Margin="0,15,0,0" HorizontalAlignment="Center"></TextBlock>
+                    <TickBar x:Name="BottomTick" Fill="LightGray"   SnapsToDevicePixels="True" Grid.Row="2"   Placement="Bottom" Height="4" Visibility="Collapsed" />
+                </Grid>
+                <ControlTemplate.Triggers>
+                    <Trigger Property="TickPlacement"  Value="TopLeft">
+                        <Setter TargetName="TopTick" Property="Visibility"  Value="Visible" />
+                    </Trigger>
+                    <Trigger Property="TickPlacement" Value="BottomRight">
+                        <Setter TargetName="BottomTick"  Property="Visibility"  Value="Visible" />
+                    </Trigger>
+                    <Trigger Property="TickPlacement" Value="Both">
+                        <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                        <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                    </Trigger>
+                </ControlTemplate.Triggers>
+            </ControlTemplate>
+
+
+
+            <Style x:Key="Horizontal_Slider" TargetType="Slider">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Height" Value="15" />
+                <Style.Triggers>
+                    <Trigger Property="Orientation" Value="Horizontal">
+                        <Setter Property="MinHeight" Value="21" />
+                        <Setter Property="MinWidth" Value="104" />
+                        <Setter Property="Template" Value="{StaticResource Slider}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="ButtonRoundedCorner" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="25" Background="{TemplateBinding Background}" BorderThickness="2">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                                </ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Slider x:Name="Sld1" Style="{StaticResource Horizontal_Slider}" VerticalAlignment="Top" TickFrequency="1" Minimum="-10" Maximum="10" Value="0" Margin="40,394,40,0" ValueChanged="Slider_ValueChanged" Height="40" IsSnapToTickEnabled="True"/>
+        <TextBox x:Name="BPMbox" HorizontalAlignment="Left" Margin="31,145,0,0" TextWrapping="Wrap" Text="60" VerticalAlignment="Top" Width="245" Height="218" FontSize="120" IsInactiveSelectionHighlightEnabled="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.44,0.4" BorderThickness="0,0,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="495,227,0,0" TextWrapping="Wrap" Text="Current Placement:" VerticalAlignment="Top" Width="115" BorderThickness="0,0,0,0"/>
+        <Label x:Name="PlacementLabel" Content="On the Beat" HorizontalAlignment="Left" Height="103" Margin="349,243,0,0" VerticalAlignment="Top" Width="420" FontSize="50" HorizontalContentAlignment="Center" FontStretch="Normal" FontWeight="Bold"/>
+        <Button x:Name="StrtBtn" Style="{StaticResource ButtonRoundedCorner}" Content="GO!" HorizontalAlignment="Left" Margin="133,324,0,0" VerticalAlignment="Top" Height="50" Width="59" BorderThickness="0,0,0,0" BorderBrush="#FFF12222" Background="YellowGreen" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="22" Margin="105,177,0,0" TextWrapping="Wrap" Text="BPM:" VerticalAlignment="Top" Width="115" BorderThickness="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.478,1.455"/>
+    </Grid>
+</Window>
