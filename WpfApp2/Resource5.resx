@@ -112,43 +112,64 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ClickAhead_loud" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ClickAhead-loud.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="NewClkAheadtreated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NewClkAheadtreated.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ClickAhead_normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ClickAhead-normal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="NewClkBehindtreated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NewClkBehindtreated.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ClickAhead_quiet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ClickAhead-quiet.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="NewClkHigh_loudALT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NewClkHigh-loudALT.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ClickAltNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ClickAltNormal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="NewClkLow_loudALT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NewClkLow-loudALT.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ClickAltQuiet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ClickAltQuiet.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="NewClkNormaltreated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NewClkNormaltreated.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ClickBehind_loud" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ClickBehind-loud.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="NewClkNormal_loudALT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NewClkNormal-loudALT.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ClickBehind_normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ClickBehind-normal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="shortNewClkAheadtreated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkAheadtreated.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ClickBehind_quiet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ClickBehind-quiet.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="shortNewClkAheadtreated2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkAheadtreated2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ClickQuiet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\ClickQuiet.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="shortNewClkBehindtreated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkBehindtreated.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Click_loud" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Click-loud.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="shortNewClkBehindtreated2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkBehindtreated2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Click_normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Click-normal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="shortNewClkHigh_loudALT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkHigh-loudALT.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shortNewClkHigh_loudALT2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkHigh-loudALT2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shortNewClkLow_loudALT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkLow-loudALT.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shortNewClkLow_loudALT2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkLow-loudALT2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shortNewClkNormaltreated" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkNormaltreated.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shortNewClkNormaltreated2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkNormaltreated2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shortNewClkNormal_loudALT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkNormal-loudALT.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="shortNewClkNormal_loudALT2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\shortNewClkNormal-loudALT2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

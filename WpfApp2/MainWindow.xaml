@@ -6,12 +6,27 @@
         xmlns:local="clr-namespace:WpfApp2"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf" xmlns:toms="urn:TomsToolbox" x:Class="WpfApp2.MainWindow"
         mc:Ignorable="d"
-        Title="CliqueTrack" Height="300" Width="800" ResizeMode="NoResize">
+        Closed="Window_Closed"
+        Title="CliqueTrack" Height="339" Width="800" ResizeMode="NoResize">
 
 
-    <Grid Height="434" VerticalAlignment="Center">
+
+    <Grid Margin="0,2,0,3">
 
         <Grid.Resources>
+
+            <Style x:Key="SliderRepeatButtonStyle" TargetType="RepeatButton">
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="RepeatButton">
+                            <Border SnapsToDevicePixels="True" Background="Red"  BorderThickness="1" BorderBrush="OrangeRed" Height="3"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
             <Style x:Key="SliderRepeatButton" TargetType="{x:Type RepeatButton}">
                 <Setter Property="SnapsToDevicePixels" Value="true" />
                 <Setter Property="OverridesDefaultStyle" Value="true" />
@@ -38,6 +53,21 @@
                 </Setter>
             </Style>
 
+
+
+            <Style x:Key="SliderRepeatButton2" TargetType="{x:Type RepeatButton}">
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type RepeatButton}">
+                            <Border SnapsToDevicePixels="True" Background="Gray"  BorderThickness="1" BorderBrush="Red" Height="5" Margin="-3,0,-4,0"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
             <Style x:Key="SliderThumb" TargetType="{x:Type Thumb}">
                 <Setter Property="SnapsToDevicePixels" Value="true" />
                 <Setter Property="OverridesDefaultStyle" Value="true" />
@@ -61,9 +91,9 @@
                         <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <TickBar x:Name="TopTick"  Fill="LightGray" VerticalAlignment="Bottom"   SnapsToDevicePixels="True" Grid.Row="0" Placement="Top" Height="7" Visibility="Visible"/>
-                    <Border BorderBrush="LightGray"  BorderThickness="0,0,0,2" />
-                    <Border x:Name="TrackBackground" VerticalAlignment="Center" Margin="0,0,0,0" BorderBrush="#FF0056FF" Background="#FF0056FF" Height="7"   Grid.Row="1"  BorderThickness="1"/>
+                    <TickBar x:Name="TopTick"  Fill="Black" VerticalAlignment="Bottom"   SnapsToDevicePixels="True" Grid.Row="0" Placement="Top" Height="7" Visibility="Visible"/>
+                    <Border BorderBrush="Black"  BorderThickness="0,0,0,2" />
+                    <Border x:Name="TrackBackground" VerticalAlignment="Center" Margin="0,0,0,0" BorderBrush="#FF0056FF" Background="#FF0099FF" Height="7"   Grid.Row="1"  BorderThickness="1"/>
                     <Track Grid.Row="1" x:Name="PART_Track" Margin="3,0,0,0">
                         <Track.DecreaseRepeatButton>
                             <RepeatButton Style="{StaticResource SliderRepeatButton1}"  Command="Slider.DecreaseLarge" />
@@ -79,7 +109,7 @@
                         </Track.IncreaseRepeatButton>
                     </Track>
                     <TextBlock Text="" Grid.Row="1" Margin="0,15,0,0" HorizontalAlignment="Center"/>
-                    <TickBar x:Name="BottomTick" Fill="LightGray"   SnapsToDevicePixels="True" Grid.Row="2"   Placement="Bottom" Height="4" Visibility="Collapsed" />
+                    <TickBar x:Name="BottomTick" Fill="Black"   SnapsToDevicePixels="True" Grid.Row="1"   Placement="Bottom" Height="4" Visibility="Collapsed" />
                 </Grid>
                 <ControlTemplate.Triggers>
                     <Trigger Property="TickPlacement"  Value="TopLeft">
@@ -121,31 +151,200 @@
                     </Setter.Value>
                 </Setter>
             </Style>
+            <Style x:Key="ButtonRoundedCorner2" TargetType="{x:Type Button}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border CornerRadius="5" Background="{TemplateBinding Background}" BorderThickness="2">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+
+            <ControlTemplate x:Key="Slider2"  TargetType="{x:Type Slider}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <!--<TickBar x:Name="TopTick"  Fill="LightGray" VerticalAlignment="Top"   SnapsToDevicePixels="True" Grid.Row="4" Placement="Top" Height="7" Visibility="Hidden"/>-->
+                    <Border BorderBrush="Red"  BorderThickness="0,0,0,0" />
+                    <Border x:Name="TrackBackground" VerticalAlignment="Center" Margin="0,-10,0,0" BorderBrush="#FF0056FF" Background="#FF0099FF" Height="7"   Grid.Row="1"  BorderThickness="0"/>
+                    <Track Grid.Row="1" x:Name="PART_Track" Margin="0,-10,0,0">
+                        <Track.DecreaseRepeatButton>
+                            <RepeatButton Style="{StaticResource SliderRepeatButton1}"  Command="Slider.DecreaseLarge" />
+                        </Track.DecreaseRepeatButton>
+                        <Track.Thumb>
+                            <Thumb Style="{StaticResource SliderThumb}" Margin="0,10,0,0"/>
+                        </Track.Thumb>
+                        <Track.LayoutTransform>
+                            <ScaleTransform ScaleY="1.8" ScaleX ="1.8" CenterX="1.8" CenterY="1.8"/>
+                        </Track.LayoutTransform>
+                        <Track.IncreaseRepeatButton>
+                            <RepeatButton Style="{StaticResource SliderRepeatButton}" Command="Slider.IncreaseLarge"/>
+                        </Track.IncreaseRepeatButton>
+                    </Track>
+                    <!--<TextBlock Text="" Grid.Row="1" Margin="0,0,0,0" HorizontalAlignment="Center"/>-->
+                    <!--<TickBar x:Name="BottomTick" Fill="LightGray"   SnapsToDevicePixels="True" Grid.Row="0"   Placement="Top" Height="3" Visibility="Hidden" />-->
+                </Grid>
+                <!--<ControlTemplate.Triggers>
+                    -->
+                <!--<Trigger Property="TickPlacement"  Value="TopLeft">
+                        <Setter TargetName="TopTick" Property="Visibility"  Value="Hidden" />
+                    </Trigger>
+                    <Trigger Property="TickPlacement" Value="BottomRight">
+                        <Setter TargetName="BottomTick"  Property="Visibility"  Value="Visible" />
+                    </Trigger>-->
+                <!--<Trigger Property="TickPlacement" Value="Both">
+                        <Setter TargetName="TopTick" Property="Visibility" Value="Hidden" />
+                        <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                    </Trigger>-->
+                <!--
+                </ControlTemplate.Triggers>-->
+            </ControlTemplate>
+
+
+
+            <ControlTemplate x:Key="Slider3"  TargetType="{x:Type Slider}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <!--<TickBar x:Name="TopTick"  Fill="LightGray" VerticalAlignment="Top"   SnapsToDevicePixels="True" Grid.Row="4" Placement="Top" Height="7" Visibility="Hidden"/>-->
+                    <Border BorderBrush="Red"  BorderThickness="0,0,0,0" />
+                    <Border x:Name="TrackBackground" VerticalAlignment="Center" Margin="0,0,0,0" BorderBrush="#FF0056FF" Background="#FFF19D07" Height="7"   Grid.Row="1"  BorderThickness="0"/>
+                    <Track Grid.Row="1" x:Name="PART_Track" Margin="0,-10,10,0">
+                        <Track.DecreaseRepeatButton>
+                            <RepeatButton Style="{StaticResource SliderRepeatButton1}"  Command="Slider.DecreaseLarge" />
+                        </Track.DecreaseRepeatButton>
+                        <Track.Thumb>
+                            <Thumb Style="{StaticResource SliderThumb}" Margin="7,0,0,0"/>
+                        </Track.Thumb>
+                        <Track.LayoutTransform>
+                            <ScaleTransform ScaleY="1.8" ScaleX ="1.8" CenterX="1.8" CenterY="1.8"/>
+                        </Track.LayoutTransform>
+                        <Track.IncreaseRepeatButton>
+                            <RepeatButton Style="{StaticResource SliderRepeatButton2}" Command="Slider.IncreaseLarge"/>
+                        </Track.IncreaseRepeatButton>
+                    </Track>
+                    <!--<TextBlock Text="" Grid.Row="1" Margin="0,0,0,0" HorizontalAlignment="Center"/>-->
+                    <!--<TickBar x:Name="BottomTick" Fill="LightGray"   SnapsToDevicePixels="True" Grid.Row="0"   Placement="Top" Height="3" Visibility="Hidden" />-->
+                </Grid>
+                <!--<ControlTemplate.Triggers>
+                    -->
+                <!--<Trigger Property="TickPlacement"  Value="TopLeft">
+                        <Setter TargetName="TopTick" Property="Visibility"  Value="Hidden" />
+                    </Trigger>
+                    <Trigger Property="TickPlacement" Value="BottomRight">
+                        <Setter TargetName="BottomTick"  Property="Visibility"  Value="Visible" />
+                    </Trigger>-->
+                <!--<Trigger Property="TickPlacement" Value="Both">
+                        <Setter TargetName="TopTick" Property="Visibility" Value="Hidden" />
+                        <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+                    </Trigger>-->
+                <!--
+                </ControlTemplate.Triggers>-->
+            </ControlTemplate>
+
+
+
+
+            <Style x:Key="HorizontalSlider2" TargetType="{x:Type Slider}">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Height" Value="15" />
+                <Style.Triggers>
+                    <Trigger Property="Orientation" Value="Horizontal">
+                        <Setter Property="MinHeight" Value="21" />
+                        <Setter Property="MinWidth" Value="104" />
+                        <Setter Property="Template" Value="{StaticResource Slider2}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+
+            <Style x:Key="HorizontalSlider3" TargetType="{x:Type Slider}">
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Height" Value="15" />
+                <Style.Triggers>
+                    <Trigger Property="Orientation" Value="Horizontal">
+                        <Setter Property="MinHeight" Value="21" />
+                        <Setter Property="MinWidth" Value="104" />
+                        <Setter Property="Template" Value="{StaticResource Slider3}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="TextBoxDisabled" TargetType="{x:Type TextBox}">
+                <Setter Property="BorderBrush" Value="Gray"/>
+            </Style>
+
+            <Style x:Key="TextBoxEnabled" TargetType="{x:Type TextBox}">
+                <Setter Property="BorderBrush" Value="#FFA90505"/>
+            </Style>
+
 
         </Grid.Resources>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="269*"/>
-            <RowDefinition Height="165*"/>
-        </Grid.RowDefinitions>
         <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="White" Offset="1"/>
-            </LinearGradientBrush>
+            <RadialGradientBrush Center="0.5,1" RadiusX="1" RadiusY="1" GradientOrigin="1,1">
+                <GradientStop Color="#FF3C79F1" Offset="1"/>
+                <GradientStop Color="#FF242424" Offset="0"/>
+                <GradientStop Color="#FF908770" Offset="0"/>
+                <GradientStop Color="#FFB37F20" Offset="0"/>
+            </RadialGradientBrush>
         </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="89*"/>
+            <ColumnDefinition Width="71*"/>
         </Grid.ColumnDefinitions>
-        <Slider x:Name="Sld1" Style="{StaticResource Horizontal_Slider}" TickFrequency="1" Minimum="-5" Maximum="5" Value="0" Margin="0,109,12,0" ValueChanged="Slider_ValueChanged" Height="40" IsSnapToTickEnabled="True" HorizontalAlignment="Right" Width="760" VerticalAlignment="Top"/>
-        <TextBox x:Name="BPMbox" Margin="0,164,612,0" TextWrapping="Wrap" FontSize="60" IsInactiveSelectionHighlightEnabled="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.44,0.4" BorderThickness="0,0,0,0" TextChanged="MakeInt" PreviewTextInput="MakeInt" FontWeight="Bold" Text="60" Background="{x:Null}" Height="80" VerticalAlignment="Top" HorizontalAlignment="Right" Width="110"/>
-        <TextBox Margin="0,181,184,0" TextWrapping="Wrap" Text="Secondary Click Placement:" BorderThickness="0,0,0,0" Background="{x:Null}" RenderTransformOrigin="0.412,0.365" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" Width="170"/>
-        <Label x:Name="PlacementLabel" Content="Silent" Margin="0,190,70,0" FontSize="40" HorizontalContentAlignment="Center" FontStretch="Normal" FontWeight="Bold" HorizontalAlignment="Right" Width="420" Height="68" VerticalAlignment="Top"/>
-        <Button x:Name="StrtBtn" Style="{StaticResource ButtonRoundedCorner}" Content="GO!" Margin="0,243,627,0" BorderThickness="3,3,3,3" BorderBrush="#FFE41C1C" Background="#FFA1D438" Click="Button_Click" Foreground="#FFA90505" FontSize="18" FontWeight="Bold" toms:Button.DialogResult="False" HorizontalAlignment="Right" Width="79" Height="61" VerticalAlignment="Top" Grid.RowSpan="2"/>
-        <TextBox Margin="0,163,647,0" TextWrapping="Wrap" Text="BPM:" BorderThickness="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.478,1.455" Background="{x:Null}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" Width="39"/>
-        <CheckBox x:Name="Check2" Content="Secondary Click Louder" Margin="0,5,86,0" BorderThickness="1,1,5,1" Checked="CheckBox_Checked_1" Unchecked="CheckBox_Checked_1" Height="18" VerticalAlignment="Top" HorizontalAlignment="Right" Width="183" Grid.Row="1"/>
-        <CheckBox x:Name="Check1" Content="Secondary Click Quieter" Margin="0,5,274,0" BorderThickness="5,1,1,1" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" Height="18" VerticalAlignment="Top" HorizontalAlignment="Right" Width="166" Grid.Row="1"/>
-        <Label Content="CliqueTrack v1.0" HorizontalAlignment="Left" Margin="627,43,0,0" Grid.Row="1" VerticalAlignment="Top" Width="156" RenderTransformOrigin="1.286,0.579" FontSize="20" Foreground="White"/>
-        <Label Content="©Phillip Vernon 2022" HorizontalAlignment="Left" Margin="4,56,0,0" Grid.Row="1" VerticalAlignment="Top" Width="210" RenderTransformOrigin="1.286,0.579" FontSize="10" Foreground="White"/>
+        <Slider x:Name="Sld1" Style="{StaticResource Horizontal_Slider}" TickFrequency="1" Minimum="-5" Maximum="5" Value="0" Margin="20,16,20,0" ValueChanged="Slider_ValueChanged" Height="40" IsSnapToTickEnabled="True" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="BPMbox" Margin="110,106,0,0" TextWrapping="Wrap" FontSize="80" IsInactiveSelectionHighlightEnabled="True" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.44,0.4" BorderThickness="0,0,0,0" TextChanged="MakeInt" PreviewTextInput="MakeInt" FontWeight="Bold" Text="60" Background="{x:Null}" Height="110" VerticalAlignment="Top" HorizontalAlignment="Left" Width="181" Grid.Column="1" Foreground="#FFA90507"/>
+        <TextBox Margin="0,50,315,0" TextWrapping="Wrap" Text="Secondary Click Placement:" BorderThickness="0,0,0,0" Background="{x:Null}" RenderTransformOrigin="0.412,0.365" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" Width="170" Foreground="#FFA1D438" FontWeight="SemiBold" Grid.ColumnSpan="2"/>
+        <Label x:Name="PlacementLabel" Content="Silent" Margin="0,55,153,0" FontSize="50" HorizontalContentAlignment="Center" FontStretch="Normal" FontWeight="Bold" HorizontalAlignment="Right" Width="494" Height="78" VerticalAlignment="Top" Grid.ColumnSpan="2" BorderBrush="#FF1A1A1A">
+            <Label.Foreground>
+                <SolidColorBrush Color="#FFA1D438" Opacity="1"/>
+            </Label.Foreground>
+        </Label>
+        <Button x:Name="StrtBtn" Style="{StaticResource ButtonRoundedCorner}" Content="GO!" Margin="0,119,240,0" BorderThickness="0,0,0,0" BorderBrush="#FFE41C1C" Background="#FFA1D438" Click="Button_Click" Foreground="#FFA90505" FontSize="50" FontWeight="Bold" toms:Button.DialogResult="True" HorizontalAlignment="Right" Width="169" Height="147" VerticalAlignment="Top"/>
+        <TextBox Margin="0,108,135,0" TextWrapping="Wrap" Text="BPM:" BorderThickness="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" RenderTransformOrigin="0.478,1.455" Background="{x:Null}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" Width="39" Foreground="#FFA90505" FontWeight="SemiBold" Grid.Column="1"/>
+        <Slider x:Name="PrimaryVolume" Style="{StaticResource HorizontalSlider2}"  HorizontalAlignment="Left" Margin="270,133,0,0" VerticalAlignment="Top" Width="241" ValueChanged="PrimaryVolume_ValueChanged" TickFrequency="0.1" Value="0.5" Minimum="0.0" Maximum="1.0" IsSnapToTickEnabled="True" Foreground="#FFA1D438" TickPlacement="None" Grid.ColumnSpan="2"/>
+        <Slider x:Name="SecondaryVolume" Style="{StaticResource HorizontalSlider2}" HorizontalAlignment="Left" Margin="270,173,0,0" VerticalAlignment="Top" Width="241" ValueChanged="SecondaryVolume_ValueChanged" TickFrequency="0.1" Value="0.5" Minimum="0.0" Maximum="1.0" IsSnapToTickEnabled="True" Foreground="#FFA1D438" Grid.ColumnSpan="2"/>
+        <Label x:Name="PrimLab" Content="Primary Click Volume&#xA;" HorizontalAlignment="Left" Margin="296,151,0,0" VerticalAlignment="Top" Height="33" Foreground="#FFA1D438" FontWeight="SemiBold" Grid.ColumnSpan="2" Width="195" HorizontalContentAlignment="Center"/>
+        <Label x:Name="SecLab" Content="Secondary Click Volume&#xA;" HorizontalAlignment="Left" Margin="296,191,0,0" VerticalAlignment="Top" Height="29" Foreground="#FFA90505" FontWeight="SemiBold" Grid.ColumnSpan="2" Width="195" HorizontalContentAlignment="Center"/>
+        <Label Content="+" HorizontalAlignment="Left" Height="26" Margin="46,148,0,0" VerticalAlignment="Top" Width="20" Foreground="#FFA1D438" Grid.Column="1"/>
+        <Label Content="+" HorizontalAlignment="Left" Height="26" Margin="46,189,0,0" VerticalAlignment="Top" Width="20" Foreground="#FFA90505" RenderTransformOrigin="1.5,0.424" Grid.Column="1"/>
+        <Label Content="-&#xA;" HorizontalAlignment="Left" Height="26" Margin="271,148,0,0" VerticalAlignment="Top" Width="20" Foreground="#FFA1D438"/>
+        <Label Content="-&#xA;" HorizontalAlignment="Left" Height="26" Margin="271,188,0,0" VerticalAlignment="Top" Width="20" Foreground="#FFA90505"/>
+        <CheckBox x:Name="AltClk" Content="Alternate Primary Click" Margin="110,218,60,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="#FFA1D438" FontWeight="SemiBold" Height="20" VerticalAlignment="Top" Grid.Column="1"/>
+        <Slider x:Name="sldcon" Style="{StaticResource HorizontalSlider2}"  HorizontalAlignment="Left" Margin="270,210,0,0" VerticalAlignment="Top" Width="241" ValueChanged="Contrast_ValueChanged" TickFrequency="10" Value="150" Minimum="150" Maximum="8000" IsSnapToTickEnabled="True" Foreground="#FFA1D438" TickPlacement="None" Grid.ColumnSpan="2"/>
+        <Label x:Name="PrimLab_Copy" Content="Click Contrast" HorizontalAlignment="Left" Margin="348,228,0,0" VerticalAlignment="Top" Height="29" FontWeight="SemiBold" BorderBrush="#FF1A1A1A" Foreground="#FFA1D438"/>
+        <Label Content="-&#xA;" HorizontalAlignment="Left" Height="26" Margin="271,226,0,0" VerticalAlignment="Top" Width="20" Foreground="#FFA1D438"/>
+        <Label Content="+" HorizontalAlignment="Left" Height="26" Margin="46,226,0,0" VerticalAlignment="Top" Width="20" Foreground="#FFA90505" Grid.Column="1"/>
+        <CheckBox x:Name="AltSec" Content="Alternate Secondary Click" HorizontalAlignment="Left" Margin="110,238,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FFA90505" FontWeight="SemiBold" RenderTransformOrigin="0.269,1.425" Grid.Column="1"/>
+        <Label x:Name="PrimLab_Copy1" Content="Secondary Note Length&#xA;" HorizontalAlignment="Left" Margin="321,262,0,0" VerticalAlignment="Top" Height="35" Foreground="#FFA90505" FontWeight="SemiBold" RenderTransformOrigin="0.238,0.53" Grid.ColumnSpan="2"/>
+        <Label Content="+" HorizontalAlignment="Left" Height="26" Margin="46,260,0,0" VerticalAlignment="Top" Width="20" Foreground="#FFA90505" Grid.Column="1"/>
+        <Label Content="-&#xA;" HorizontalAlignment="Left" Height="26" Margin="271,260,0,0" VerticalAlignment="Top" Width="20" Foreground="#FFA90505"/>
+        <Slider x:Name="sldlen" Style="{StaticResource HorizontalSlider2}"  HorizontalAlignment="Left" Margin="270,246,0,0" VerticalAlignment="Top" Width="241" ValueChanged="NoteLength_ValueChanged" TickFrequency="5" Value="100" Minimum="30" Maximum="100" IsSnapToTickEnabled="True" Foreground="#FFA1D438" TickPlacement="None" Grid.ColumnSpan="2"/>
+        <Label Content="BEHIND" HorizontalAlignment="Left" Margin="13,30,0,298" Width="85" Foreground="#FFA1D438" HorizontalContentAlignment="Left"/>
+        <Label Content="AHEAD" Margin="262,29,20,299" Foreground="#FFA1D438" HorizontalContentAlignment="Right" Grid.Column="1"/>
+        <Label Content="v1.4 - © Phillip Vernon 2022" HorizontalAlignment="Left" Margin="50,262,0,0" VerticalAlignment="Top" Foreground="#FFE7F2F2" FontWeight="SemiBold" RenderTransformOrigin="0.501,-0.422" Width="112" FontSize="8"/>
+        <CheckBox x:Name="hardpan" Content="Hard L/R pan" Margin="110,256,147,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="#FFA1D438" FontWeight="SemiBold" Height="15" VerticalAlignment="Top" Grid.Column="1" Unchecked="invertcheck" Checked="invertcheck"/>
+        <CheckBox x:Name="invertpan" Content="Invert pan" HorizontalAlignment="Left" Margin="208,256,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FFA90505" FontWeight="SemiBold" RenderTransformOrigin="0.269,1.425" Width="81" Grid.Column="1" Checked="invertcheck" Unchecked="invertcheck"/>
+        <Label Content="Behind" HorizontalAlignment="Left" Height="24" Margin="13,40,0,0" VerticalAlignment="Top" Width="78" Foreground="#FFA1D438" FontWeight="SemiBold"/>
+        <Label Content="Ahead" HorizontalAlignment="Left" Height="24" Margin="252,38,0,0" VerticalAlignment="Top" Width="78" Grid.Column="1" HorizontalContentAlignment="Right" Foreground="#FFA1D438" FontWeight="SemiBold"/>
     </Grid>
 
 </Window>

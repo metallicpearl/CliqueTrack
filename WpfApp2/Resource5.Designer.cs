@@ -22,14 +22,14 @@ namespace WpfApp2 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource1 {
+    internal class Resource5 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resource1() {
+        internal Resource5() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace WpfApp2 {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WpfApp2.Resource1", typeof(Resource1).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WpfApp2.Resource5", typeof(Resource5).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,99 +63,162 @@ namespace WpfApp2 {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Click_loud {
+        internal static System.IO.UnmanagedMemoryStream NewClkAheadtreated {
             get {
-                return ResourceManager.GetStream("Click_loud", resourceCulture);
+                return ResourceManager.GetStream("NewClkAheadtreated", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Click_normal {
+        internal static System.IO.UnmanagedMemoryStream NewClkBehindtreated {
             get {
-                return ResourceManager.GetStream("Click_normal", resourceCulture);
+                return ResourceManager.GetStream("NewClkBehindtreated", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ClickAhead_loud {
+        internal static System.IO.UnmanagedMemoryStream NewClkHigh_loudALT {
             get {
-                return ResourceManager.GetStream("ClickAhead_loud", resourceCulture);
+                return ResourceManager.GetStream("NewClkHigh_loudALT", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ClickAhead_normal {
+        internal static System.IO.UnmanagedMemoryStream NewClkLow_loudALT {
             get {
-                return ResourceManager.GetStream("ClickAhead_normal", resourceCulture);
+                return ResourceManager.GetStream("NewClkLow_loudALT", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ClickAhead_quiet {
+        internal static System.IO.UnmanagedMemoryStream NewClkNormal_loudALT {
             get {
-                return ResourceManager.GetStream("ClickAhead_quiet", resourceCulture);
+                return ResourceManager.GetStream("NewClkNormal_loudALT", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ClickAltNormal {
+        internal static System.IO.UnmanagedMemoryStream NewClkNormaltreated {
             get {
-                return ResourceManager.GetStream("ClickAltNormal", resourceCulture);
+                return ResourceManager.GetStream("NewClkNormaltreated", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ClickAltQuiet {
+        internal static System.IO.UnmanagedMemoryStream shortNewClkAheadtreated {
             get {
-                return ResourceManager.GetStream("ClickAltQuiet", resourceCulture);
+                return ResourceManager.GetStream("shortNewClkAheadtreated", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ClickBehind_loud {
+        internal static System.IO.UnmanagedMemoryStream shortNewClkAheadtreated2 {
             get {
-                return ResourceManager.GetStream("ClickBehind_loud", resourceCulture);
+                return ResourceManager.GetStream("shortNewClkAheadtreated2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ClickBehind_normal {
+        internal static System.IO.UnmanagedMemoryStream shortNewClkBehindtreated {
             get {
-                return ResourceManager.GetStream("ClickBehind_normal", resourceCulture);
+                return ResourceManager.GetStream("shortNewClkBehindtreated", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ClickBehind_quiet {
+        internal static System.IO.UnmanagedMemoryStream shortNewClkBehindtreated2 {
             get {
-                return ResourceManager.GetStream("ClickBehind_quiet", resourceCulture);
+                return ResourceManager.GetStream("shortNewClkBehindtreated2", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ClickQuiet {
+        internal static System.IO.UnmanagedMemoryStream shortNewClkHigh_loudALT {
             get {
-                return ResourceManager.GetStream("ClickQuiet", resourceCulture);
+                return ResourceManager.GetStream("shortNewClkHigh_loudALT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream shortNewClkHigh_loudALT2 {
+            get {
+                return ResourceManager.GetStream("shortNewClkHigh_loudALT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream shortNewClkLow_loudALT {
+            get {
+                return ResourceManager.GetStream("shortNewClkLow_loudALT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream shortNewClkLow_loudALT2 {
+            get {
+                return ResourceManager.GetStream("shortNewClkLow_loudALT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream shortNewClkNormal_loudALT {
+            get {
+                return ResourceManager.GetStream("shortNewClkNormal_loudALT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream shortNewClkNormal_loudALT2 {
+            get {
+                return ResourceManager.GetStream("shortNewClkNormal_loudALT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream shortNewClkNormaltreated {
+            get {
+                return ResourceManager.GetStream("shortNewClkNormaltreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream shortNewClkNormaltreated2 {
+            get {
+                return ResourceManager.GetStream("shortNewClkNormaltreated2", resourceCulture);
             }
         }
     }
